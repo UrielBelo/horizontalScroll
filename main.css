@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100vw;
+    min-height: 100vh;
+}
+#pages{
+    display: grid;
+    max-width: 100vw;
+    overflow-x: hidden;
+    grid-template-columns: 100vw 100vw 100vw;
+    scroll-behavior: smooth;
+}
+#homepage{
+    background-color: blue;
+}
+#noticias{
+    background-color: yellow;
+}
+#contatos{
+    background-color: green;
+}
+#floatingButton{
+    position: absolute;
+    top: 80vh;
+    left: calc(50vw - 20px);
+}
+#floatingButton #pointsButton{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 3;
+}
+#floatingButton .floatingInactive{
+    top: -30px;
+    left: 5px;
+    opacity: 0;
+}
+#floatingButton .floatingActive{
+    opacity: 1;
+    transform: scale(1.6);
+}
+#floatingButton .floating{
+    z-index: 2;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: top 1.5s ease-in-out,
+                left 1.5s ease-in-out,
+                opacity 1.5s ease-in-out,
+                transform 1.5s ease-in-out;
+}
